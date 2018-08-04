@@ -1,0 +1,6 @@
+the type of column 1 is [<type 'str'>]	
+the type of column 2 is [<type 'datetime.datetime'>]	
+the maximum length of the strings is 622	
+the time range in the dataset is [datetime.datetime(2017, 9, 26, 22, 46, 26), datetime.datetime(2018, 7, 17, 21, 5, 2)]	
+the number of samples is 1015	
+the number of bad records is 1	

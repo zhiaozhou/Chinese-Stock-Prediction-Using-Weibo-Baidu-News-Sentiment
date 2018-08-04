@@ -1,0 +1,74 @@
+[zz1749@login-2-1 data_cleaning]$ hadoop jar /opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/lib/hadoop-mapreduce/hadoop-streaming.jar -D mapreduce.job.reduces=1 -file ./map_cleaning.py -mapper "./map_cleaning.py" -file ./reduce_cleaning.py -reducer "./reduce_cleaning.py" -input hdfs://dumbo/user/zz1749/weibo/original_weibos.txt -output hdfs://dumbo/user/zz1749/weibo/cleaning_output/18/07/18 15:07:57 WARN streaming.StreamJob: -file option is deprecated, please use generic option -files instead.
+packageJobJar: [./map_cleaning.py, ./reduce_cleaning.py] [/opt/cloudera/parcels/CDH-5.11.1-1.cdh5.11.1.p0.4/jars/hadoop-streaming-2.6.0-cdh5.11.1.jar] /tmp/streamjob7428047695370727704.jar tmpDir=null
+18/07/18 15:07:59 INFO mapred.FileInputFormat: Total input paths to process : 1
+18/07/18 15:07:59 INFO mapreduce.JobSubmitter: number of splits:2
+18/07/18 15:08:00 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1528077494936_5089
+18/07/18 15:08:00 INFO impl.YarnClientImpl: Submitted application application_1528077494936_5089
+18/07/18 15:08:00 INFO mapreduce.Job: The url to track the job: http://babar.es.its.nyu.edu:8088/proxy/application_1528077494936_5089/
+18/07/18 15:08:00 INFO mapreduce.Job: Running job: job_1528077494936_5089
+18/07/18 15:08:04 INFO mapreduce.Job: Job job_1528077494936_5089 running in uber mode : false
+18/07/18 15:08:04 INFO mapreduce.Job:  map 0% reduce 0%
+18/07/18 15:08:08 INFO mapreduce.Job:  map 100% reduce 0%
+18/07/18 15:08:14 INFO mapreduce.Job:  map 100% reduce 100%
+18/07/18 15:08:15 INFO mapreduce.Job: Job job_1528077494936_5089 completed successfully
+18/07/18 15:08:15 INFO mapreduce.Job: Counters: 53
+        File System Counters
+                FILE: Number of bytes read=172254
+                FILE: Number of bytes written=751175
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=339952
+                HDFS: Number of bytes written=280181
+                HDFS: Number of read operations=9
+                HDFS: Number of large read operations=0
+                HDFS: Number of write operations=2
+        Job Counters
+                Launched map tasks=2
+                Launched reduce tasks=1
+                Data-local map tasks=2
+                Total time spent by all maps in occupied slots (ms)=16308
+                Total time spent by all reduces in occupied slots (ms)=13698
+                Total time spent by all map tasks (ms)=4077
+                Total time spent by all reduce tasks (ms)=2283
+                Total vcore-milliseconds taken by all map tasks=4077
+                Total vcore-milliseconds taken by all reduce tasks=2283
+                Total megabyte-milliseconds taken by all map tasks=16699392
+                Total megabyte-milliseconds taken by all reduce tasks=14026752
+        Map-Reduce Framework
+                Map input records=1016
+                Map output records=1016
+                Map output bytes=285663
+                Map output materialized bytes=172533
+                Input split bytes=204
+                Combine input records=0
+                Combine output records=0
+                Reduce input groups=1016
+                Reduce shuffle bytes=172533
+                Reduce input records=1016
+                Reduce output records=1015
+                Spilled Records=2032
+                Shuffled Maps =2
+                Failed Shuffles=0
+                Merged Map outputs=2
+                GC time elapsed (ms)=133
+                CPU time spent (ms)=2700
+                Physical memory (bytes) snapshot=1441533952
+                Virtual memory (bytes) snapshot=11193987072
+                Total committed heap usage (bytes)=3628072960
+                Peak Map Physical memory (bytes)=541597696
+                Peak Map Virtual memory (bytes)=3725639680
+                Peak Reduce Physical memory (bytes)=360386560
+                Peak Reduce Virtual memory (bytes)=3743039488
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Input Format Counters
+                Bytes Read=339748
+        File Output Format Counters
+                Bytes Written=280181
+18/07/18 15:08:15 INFO streaming.StreamJob: Output directory: hdfs://dumbo/user/zz1749/weibo/cleaning_output/
